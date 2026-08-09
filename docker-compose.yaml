@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: 69-s2-postgres
+    ports:
+      - 54321:5432
+    environment:
+      - POSTGRES_PASSWORD=GlA225477
+      - POSTGRES_USER=thitiwat
+      - POSTGRES_DB=thitiwat
+    volumes:
+      - ./data-postgres:/var/lib/postgresql/data
+
+  admin:
+    image: dpage/pgadmin4
+    container_name: 69-s2-admin
+    ports:
+      - 8082:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=thitiwat-kh@rmutp.ac.th
+      - PGADMIN_DEFAULT_PASSWORD=GlA225477
+    volumes:
+      - ./data-pgadmin:/var/lib/pgadmin
+
+volumes:
+  data-postgres:
