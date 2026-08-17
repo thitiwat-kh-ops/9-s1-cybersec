@@ -1,35 +1,35 @@
 # REST
 
 ## Login
-POST http://localhost:9192/admin/login
+POST http://localhost:9092/admin/login
 Content-Type: application/json
 
 {
-    "email": "",
-    "password": "",
-    "rememberMe": false
+  "email": "",
+  "password": "",
+  "rememberMe": false
 }
 
 ## Register
-POST http://localhost:9192/admin/register
+POST http://localhost:9092/admin/register
 Content-Type: application/json
 
 {
-    "email": "",
-    "password": "",
-    "firstname": "",
-    "lastname": ""
+  "email": "",
+  "password": "",
+  "firstname": "",
+  "lastname": ""
 }
 
 ## Forgot Password
-POST http://localhost:9192/admin/forgot-password
+POST http://localhost:9092/admin/forgot-password
 Content-Type: application/json
 
 {
-    "email": ""
+  "email": ""
 }
 
 ## Profile
-GET http://localhost:9192/admin/users/me
+GET http://localhost:9092/admin/users/me
 Content-Type: application/json
 Authorization: Bearer
